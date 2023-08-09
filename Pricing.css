@@ -1,0 +1,162 @@
+*{
+    text-align: center;
+    
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+}
+.header #logo img{
+    width: 50px;
+}
+.navbar a{
+ color: black;
+ font-size: 1.5rem;
+ margin-right: 1.5rem;
+ position: relative;
+ padding: 1rem;
+}
+.navbar a:hover{
+    color: var(--mainclr);
+}
+.navbar a:after {
+  content: '';
+  position: absolute;
+  background: var(--mainclr);
+  height: 3px;
+  width: 0;
+  bottom: -7px;
+  left: 0;
+  transition: .5s;
+}
+.navbar a:hover:after {
+    width: 100%;
+}
+nav{
+    margin-left: 10rem;
+    padding-top: 2rem;
+    padding-left: 35rem;
+} 
+.icons div{
+     color: var(--mainclr);
+     cursor: pointer;
+     font-size: 2rem;
+     display: none;
+}
+.navbar.active{
+    left: -10rem;
+}
+
+#dol-img{
+    
+    height: 7rem;
+    width: 7rem;
+    border-radius: 85%;
+}
+#dol-back{
+    margin-top: 1rem;
+    margin-bottom: 1.2rem;
+    margin-left: 45%;
+    background-color: #C9EEFF;
+    height: 55%;
+    width: 10%;
+    border-radius: 4%;
+}
+#blue-line{
+    margin-left: 49%;
+    width: 2%;
+    border: blue 2px solid;
+    border-radius: 40%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#row{
+    margin-top: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  li {
+    position: relative;
+    text-align: left;
+    
+  }
+  li:before {
+    content: '';  /* placeholder for the SVG */
+    position: absolute;
+    left: 0;  /* place the SVG at the start of the padding */
+    width: 1em;
+    height: 1em;
+    margin-top: 0.2rem;
+    
+    background: url("data:image/svg+xml;utf8,<?xml version='1.0' encoding='utf-8'?><svg width='18' height='18' viewBox='0 0 1792 1792' xmlns='http://www.w3.org/2000/svg'><path d='M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z'/></svg>") no-repeat;
+  }
+.list-group{
+    margin: 2.5rem;
+    margin-top: 0.4rem;
+}
+.card-sub-body{
+    margin: 1rem;
+    background-color: #C9EEFF;
+    border-radius: 1rem;
+    padding: 2rem;
+}
+#btn{
+    margin: top 1%;;
+}
+
+
+
+.card:hover {
+    color: #fff;
+    transform: scale(1.025);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 5px 10px
+}
+
+.card:hover .backgroundEffect {
+    bottom: 0;
+    height: 320px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    background: #1b9ce3;
+    animation: popBackground 0.3s ease-in
+}
+
+@keyframes popBackground {
+    0% {
+        height: 20px;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%
+    }
+
+    50% {
+        height: 80px;
+        border-top-left-radius: 75%;
+        border-top-right-radius: 75%
+    }
+
+    75% {
+        height: 160px;
+        border-top-left-radius: 85%;
+        border-top-right-radius: 85%
+    }
+
+    100% {
+        height: 320px;
+        border-top-left-radius: 100%;
+        border-top-right-radius: 100%
+    }
+}
